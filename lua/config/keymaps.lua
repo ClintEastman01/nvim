@@ -11,6 +11,12 @@ keymap("n", "<localleader>w", ":wa<cr>", { noremap = true, silent = true, desc =
 keymap("n", "<localleader>q", ":q<cr>", { noremap = true, silent = true, desc = "Quit all" })
 keymap(
   "n",
+  "<localleader>p",
+  ":lua require('precognition').toggle()<cr>",
+  { noremap = true, silent = true, desc = "Toggle off precognition" }
+)
+keymap(
+  "n",
   "<leader>sx",
   require("telescope.builtin").resume,
   { noremap = true, silent = true, desc = "Last Telescope" }
