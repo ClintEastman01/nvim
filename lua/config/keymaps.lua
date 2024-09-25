@@ -40,7 +40,12 @@ keymap("n", "<C-Up>", ":resize -2<cr>", opts)
 keymap("n", "<C-Down>", ":resize +2<cr>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<cr>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<cr>", opts)
-
+keymap(
+  "n",
+  "<leader>U",
+  "<cmd>lua require('undotree').toggle()<cr>",
+  { noremap = true, silent = true, desc = "Undotree" }
+)
 -- Harpoon
 -- keymap("n", "<leader>ha", function()
 --   harpoon:list():append()
